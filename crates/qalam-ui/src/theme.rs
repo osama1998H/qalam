@@ -13,8 +13,12 @@ pub struct Theme {
     pub panel_background: Color,
     /// لون النص الأساسي
     pub text: Color,
+    /// لون النص الأمامي (المحرر)
+    pub foreground: Color,
     /// لون النص الثانوي
     pub text_secondary: Color,
+    /// لون أرقام الأسطر
+    pub line_number: Color,
     /// لون التحديد
     pub selection: Color,
     /// لون المؤشر
@@ -53,7 +57,9 @@ impl Theme {
             background: Color::from_rgb8(30, 30, 30),
             panel_background: Color::from_rgb8(37, 37, 38),
             text: Color::from_rgb8(212, 212, 212),
+            foreground: Color::from_rgb8(212, 212, 212),
             text_secondary: Color::from_rgb8(128, 128, 128),
+            line_number: Color::from_rgb8(133, 133, 133),
             selection: Color::from_rgba8(38, 79, 120, 0.5),
             cursor: Color::from_rgb8(255, 255, 255),
             border: Color::from_rgb8(60, 60, 60),
@@ -75,7 +81,9 @@ impl Theme {
             background: Color::from_rgb8(255, 255, 255),
             panel_background: Color::from_rgb8(243, 243, 243),
             text: Color::from_rgb8(0, 0, 0),
+            foreground: Color::from_rgb8(0, 0, 0),
             text_secondary: Color::from_rgb8(100, 100, 100),
+            line_number: Color::from_rgb8(120, 120, 120),
             selection: Color::from_rgba8(173, 214, 255, 0.5),
             cursor: Color::from_rgb8(0, 0, 0),
             border: Color::from_rgb8(200, 200, 200),

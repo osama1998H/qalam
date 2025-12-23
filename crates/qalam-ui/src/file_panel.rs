@@ -1,8 +1,8 @@
 //! لوحة الملفات - File panel component
 
 use crate::theme::Theme;
-use iced::widget::{button, column, container, scrollable, text, Column};
-use iced::{Element, Length};
+use iced::widget::{button, container, row, scrollable, text, Column};
+use iced::{alignment, Element, Length};
 use std::path::{Path, PathBuf};
 
 /// عنصر الشجرة - Tree item
@@ -192,13 +192,19 @@ impl FilePanel {
                 }
             };
 
-            let label = format!("{}{} {}", indent, icon, item.name);
+            // RTL: name first, then icon, then indent (reversed for RTL display)
+            let label = format!("{} {}{}", item.name, icon, indent);
             let is_selected = self.selected == Some(index);
             let bg_color = if is_selected { selection_color } else { panel_bg };
 
-            let item_button = button(
-                text(label).size(14)
-            )
+            // RTL layout: use row with horizontal space to push content to the right
+            let item_content = row![
+                iced::widget::horizontal_space(),
+                text(label).size(14),
+            ]
+            .width(Length::Fill);
+
+            let item_button = button(item_content)
             .width(Length::Fill)
             .padding(4)
             .style(move |_theme, _status| {

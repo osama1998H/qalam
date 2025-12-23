@@ -7,6 +7,7 @@ description = "واجهة المستخدم لمحرر قلم - UI components for
 
 [dependencies]
 iced.workspace = true
+cosmic-text.workspace = true
 qalam-core.workspace = true
 qalam-text.workspace = true
 qalam-syntax.workspace = true

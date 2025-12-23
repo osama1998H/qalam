@@ -2763,6 +2763,7 @@ dependencies = [
 name = "qalam-ui"
 version = "0.1.0"
 dependencies = [
+ "cosmic-text",
  "iced",
  "log",
  "qalam-core",
