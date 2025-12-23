@@ -1,0 +1,13 @@
+[package]
+name = "qalam-lsp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "عميل بروتوكول خادم اللغة - LSP client for Tarqeem integration"
+
+[dependencies]
+lsp-types.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+log.workspace = true

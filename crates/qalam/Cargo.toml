@@ -1,0 +1,21 @@
+[package]
+name = "qalam"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "قلم - محرر أكواد عربي | Qalam - Arabic RTL Code Editor"
+
+[[bin]]
+name = "qalam"
+path = "src/main.rs"
+
+[dependencies]
+qalam-core.workspace = true
+qalam-text.workspace = true
+qalam-ui.workspace = true
+qalam-syntax.workspace = true
+qalam-lsp.workspace = true
+iced.workspace = true
+tokio.workspace = true
+env_logger.workspace = true
+log.workspace = true

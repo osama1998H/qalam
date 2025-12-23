@@ -1,0 +1,12 @@
+[package]
+name = "qalam-text"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "معالجة النصوص العربية - Arabic RTL text handling"
+
+[dependencies]
+cosmic-text.workspace = true
+unicode-bidi.workspace = true
+arabic_reshaper.workspace = true
+thiserror.workspace = true

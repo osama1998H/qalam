@@ -1,0 +1,46 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Osama Muhammed"]
+repository = "https://github.com/osamamuhammed/qalam"
+description = "محرر أكواد عربي - Arabic RTL Code Editor"
+
+[workspace.dependencies]
+# Core
+ropey = "1.6"
+unicode-bidi = "0.3"
+
+# Text Rendering
+cosmic-text = "0.12"
+arabic_reshaper = "0.4"
+
+# UI
+iced = { version = "0.13", features = ["canvas", "advanced", "tokio"] }
+
+# LSP
+lsp-types = "0.97"
+tower-lsp = "0.20"
+async-process = "2"
+
+# Syntax
+tree-sitter = "0.24"
+
+# Utilities
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+log = "0.4"
+env_logger = "0.11"
+
+# Internal crates
+qalam-core = { path = "crates/qalam-core" }
+qalam-text = { path = "crates/qalam-text" }
+qalam-ui = { path = "crates/qalam-ui" }
+qalam-syntax = { path = "crates/qalam-syntax" }
+qalam-lsp = { path = "crates/qalam-lsp" }

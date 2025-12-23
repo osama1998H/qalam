@@ -1,0 +1,15 @@
+[package]
+name = "qalam-ui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "واجهة المستخدم لمحرر قلم - UI components for Qalam editor"
+
+[dependencies]
+iced.workspace = true
+qalam-core.workspace = true
+qalam-text.workspace = true
+qalam-syntax.workspace = true
+qalam-lsp.workspace = true
+tokio.workspace = true
+log.workspace = true
